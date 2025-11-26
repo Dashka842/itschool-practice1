@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.project1"
+    namespace = "com.dgromova.project1"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.project1"
+        applicationId = "com.dgromova.project1"
         minSdk = 24
         targetSdk = 36
         versionCode = 1

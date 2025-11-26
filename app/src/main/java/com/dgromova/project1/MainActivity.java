@@ -1,4 +1,4 @@
-package com.example.project1;
+package com.dgromova.project1;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     TextView Text;
     ListView List;
     ArrayAdapter<String> adapter;
-    private ArrayList<String> history = new ArrayList<>();
+    ArrayList<String> history = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,15 +24,15 @@ public class MainActivity extends AppCompatActivity {
 
         Text = findViewById(R.id.Text);
         List = findViewById(R.id.List);
-        adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_multiple_choice, history);
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_multiple_choice, history);
         List.setAdapter(adapter);
 
         if (savedInstanceState != null) {
-            score = savedInstanceState.getInt("SAVED_SCORE", 0);
+            score = savedInstanceState.getInt("SAVE_SCORE", 0);
             Text.setText(String.valueOf(score));
 
             history.clear();
-            ArrayList<String> savedHistory = savedInstanceState.getStringArrayList("SAVED_HISTORY");
+            ArrayList<String> savedHistory = savedInstanceState.getStringArrayList("SAVE_HISTORY");
             if (savedHistory != null) {
                 history.addAll(savedHistory);
             }

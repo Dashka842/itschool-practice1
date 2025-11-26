@@ -1,4 +1,4 @@
-package com.example.project1;
+package com.dgromova.project1;
 
 import org.junit.Test;
 
